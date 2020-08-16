@@ -33,7 +33,7 @@ router.get("/api/workouts", (req, res) => {
     })
 });
 
-router.get("/aou/workouts/range", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
     Workout.find().limit(7)
     .then(data => {
         res.json(data)
