@@ -12,16 +12,16 @@ const workoutSchema = new Schema (
                 type: {
                         type: String,
                         trim: true,
-                        required: "Pick an exercise type"
+                        required: true
                         },
                 name: {
                         type: String,
                         trim: true,
-                        required: "Enter exercise name"
+                        required: true
                         },
                 duration: {
                         type: Number,
-                        required: "Enter length of workout"
+                        required: true
                         },
                 weight: {
                         type: Number
@@ -55,5 +55,5 @@ const workoutSchema = new Schema (
                 }, 0)
             })
 
-            const Workout = mongoose.model("workoutdb", workoutSchema);
+            const Workout = mongoose.model("workout", workoutSchema);
             module.exports = Workout;
